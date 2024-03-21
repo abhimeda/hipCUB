@@ -1,0 +1,18 @@
+trigger:
+- release/rocm-rel-6.0
+
+pool: NV31
+steps:
+- script: mkdir build
+  displayName: 'Making Build directory'
+
+- script: ./install -c
+  displayName: 'Building hipCUB using install script'
+
+- script: |
+    cd build
+    ls 
+    cd release
+    ctest
+  displayName: 'Running tests'
+
