@@ -1,7 +1,7 @@
 trigger:
 - release/rocm-rel-6.0
 
-pool: NV31
+pool: gfx1100
 steps:
 - script: mkdir build
   displayName: 'Making Build directory'
